@@ -4,9 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>User Page</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #905275, #587c94);
+      font-family: Arial, sans-serif;
+    }
+
+    .user-box {
+      text-align: center;
+      padding: 40px;
+      background: linear-gradient(to right,#083a82, #942263);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.684);
+    }
+
+    .user-title {
+      font-size: 34px;
+      font-weight: bold;
+      color: #f3f3f3d4;
+      margin-bottom: 15px;
+    }
+
+    .user-text {
+      font-size: 18px;
+      color: #fcfcfcd4;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome User</h1>
-  <p>You have logged in as Non-Admin User.</p>
+  <div class="user-box">
+    <h1 class="user-title" id="welcomeMessage">Welcome User</h1>
+    <p class="user-text">You have logged in successfully.</p>
+  </div>
+
+  <script>
+    // Get saved email from localStorage
+    const savedUser = localStorage.getItem("loggedInUser");
+
+    // If email exists, take only the part before @
+    if (savedUser) {
+      const nameOnly = savedUser.split("@")[0];
+      document.getElementById("welcomeMessage").textContent = "Welcome, " + nameOnly;
+    }
+  </script>
 </body>
 </html>

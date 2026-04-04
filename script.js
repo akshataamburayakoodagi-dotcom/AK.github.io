@@ -81,8 +81,23 @@ const passwordError = document.getElementById("passwordError");
 const adminEmail = "admin@gmail.com";
 const adminPassword = "Admin@123";
 
-const userEmail = "user@gmail.com";
-const userPassword = "User@123";
+// const userEmail = "user@gmail.com";
+// const userPassword = "User@123";
+
+
+  // Pattern for Gmail validation
+  // Must be a proper Gmail ending with @gmail.com
+  const userEmail = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+  // Pattern for password validation
+  // Must contain:
+  // at least 1 letter
+  // at least 1 number
+  // at least 1 special character
+  // minimum 6 characters
+  const userPassword =
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{6,}$/;
+
 
 // Run when form is submitted
 form.addEventListener("submit", function (event) {
@@ -105,17 +120,15 @@ form.addEventListener("submit", function (event) {
     passwordError.textContent = "Password cannot be empty.";
     return;
   }
+  // Save entered email so next page can use it
+  localStorage.setItem("loggedInUser", enteredEmail);
 
   // Admin login
   if (enteredEmail === adminEmail && enteredPassword === adminPassword) {
     window.location.href = "admin.html";
   }
   // Normal user login
-  else if (enteredEmail === userEmail && enteredPassword === userPassword) {
+  else{
     window.location.href = "user.html";
-  }
-  // Invalid login
-  else {
-    passwordError.textContent = "Invalid Gmail ID or password.";
   }
 });

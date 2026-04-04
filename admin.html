@@ -4,9 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Page</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;   /* center horizontally */
+      align-items: center;       /* center vertically */
+      background: linear-gradient(to right, #032c62, #7c1717);
+      font-family: Arial, sans-serif;
+    }
+
+    .admin-box {
+      text-align: center;
+      padding: 40px;
+      background: linear-gradient(to right, #7c1717, #032c62);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .admin-title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #a0b4ea;   /* change this color */
+      margin-bottom: 15px;
+    }
+
+    .admin-text {
+      font-size: 18px;
+      color: #7a93bb;   /* change this color */
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome Admin</h1>
-  <p>You have logged in as Admin.</p>
+  <div class="admin-box">
+    <h1 class="admin-title">Welcome Admin</h1>
+    <p class="admin-text">You have logged in successfully.</p>
+  </div>
 </body>
 </html>
