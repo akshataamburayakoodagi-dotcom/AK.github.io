@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Makes the page responsive on mobile/laptop screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title shown in browser tab -->
+  <title>Login Portal</title>
+
+  <!-- Linking external CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header section at the top -->
+  <header class="site-header">
+    <h1>AK Login Portal</h1>
+    <p>Secure access for people</p>
+  </header>
+
+  <!-- Main content area -->
+  <main class="main-content">
+    <div class="login-card">
+
+      <!-- Logo image -->
+      <img src="logo.png" alt="Portal Logo" class="logo" />
+
+      <!-- Login form heading -->
+      <h2>Sign In</h2>
+
+      <!-- Login form -->
+      <form id="loginForm">
+
+        <!-- Gmail input label -->
+        <label for="username">User ID</label>
+
+        <!-- Input box for Gmail -->
+        <input
+          type="email"
+          id="username"
+          placeholder="Enter your Gmail"
+        />
+
+        <!-- Error message for Gmail -->
+        <small id="usernameError" class="error-message"></small>
+
+        <!-- Password input label -->
+        <label for="password">Password</label>
+
+        <!-- Input box for password -->
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter password"
+        />
+
+        <!-- Error message for password -->
+        <small id="passwordError" class="error-message"></small>
+
+        <!-- Submit button -->
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="site-footer">
+    <p>© 2026 AK Portal | All Rights Reserved</p>
+  </footer>
+
+  <!-- Linking external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

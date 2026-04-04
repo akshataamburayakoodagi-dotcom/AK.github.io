@@ -1,0 +1,125 @@
+/* Removes default margin and padding from all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full page body styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #6f747b, #272c32);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
+.site-header {
+  background-color: #2b2b2d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Space below header title */
+.site-header h1 {
+  margin-bottom: 8px;
+}
+
+/* Main section centers the login box */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Login card box styling */
+.login-card {
+  background: rgba(78, 78, 80, 0.617);
+  width: 380px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgb(243, 241, 241);
+  text-align: center;
+}
+
+/* Logo image styling */
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Login heading styling */
+.login-card h2 {
+  margin-bottom: 20px;
+  color: #c6cbd9;
+}
+
+/* Align form content neatly */
+form {
+  text-align: left;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #e1e4ec;
+}
+
+/* Input box styling */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Input box highlight when clicked */
+input:focus {
+  border-color: #323334;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #3b3e44;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #4b4b4e;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+/* Footer styling */
+.site-footer {
+  background-color: #303031;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
