@@ -47,7 +47,7 @@ body {
 }
 
 /* Logo image styling */
-.logo {
+.logo1 {
   width: 90px;
   height: 90px;
   object-fit: contain;
@@ -109,7 +109,7 @@ button:hover {
 
 /* Error message styling */
 .error-message {
-  color: red;
+  color: rgba(255, 0, 0, 0.701);
   font-size: 12px;
   display: block;
   margin-top: 4px;
@@ -122,4 +122,21 @@ button:hover {
   color: white;
   text-align: center;
   padding: 15px;
+}
+
+.register-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #eff1f5;
+}
+
+.register-link a {
+  color: #f1f3f7;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
 }

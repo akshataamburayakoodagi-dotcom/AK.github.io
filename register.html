@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #464645d7, #00000059);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: linear-gradient(to right, #ffffff, #9b9b9a);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        /* Logo image styling */
+        .logo1 {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .register-card {
+            background: rgba(0, 0, 0, 0.44);
+            width: 400px;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        .register-card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 6px;
+            margin-top: 12px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        input {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+            padding: 12px;
+            border-radius: 14px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+
+        input:focus {
+            border-color: #ffffff;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f7f7f7;
+        }
+
+        .back-link {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .back-link a {
+            color: #fdfdfd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #fefefe;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>AK Registration Portal</h1>
+        <p>Create your new account</p>
+    </header>
+
+    <main class="main-content">
+        <div class="register-card">
+            <h2>Create Account</h2>
+
+            <form>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" />
+
+                <label for="email">Gmail ID</label>
+                <input type="email" id="email" placeholder="Enter your Gmail ID" />
+
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" placeholder="Create password" />
+
+                <label for="re-enterPassword">Re-Enter Password</label>
+                <input type="password" id="re-enterPassword" placeholder="re-enter password" />
+
+                <button type="submit">Register</button>
+            </form>
+
+            <p class="back-link">
+                Already have an account?
+                <a href="index.html">Login</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 AK Portal | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>

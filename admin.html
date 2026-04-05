@@ -1,45 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Page</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;   /* center horizontally */
-      align-items: center;       /* center vertically */
-      background: linear-gradient(to right, #032c62, #7c1717);
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    .admin-box {
-      text-align: center;
-      padding: 40px;
-      background: linear-gradient(to right, #7c1717, #032c62);
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
+    <title>Admin Page</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            /* center horizontally */
+            align-items: center;
+            /* center vertically */
+            background: linear-gradient(to right, #032c62, #7c1717);
+            font-family: Arial, sans-serif;
+        }
 
-    .admin-title {
-      font-size: 36px;
-      font-weight: bold;
-      color: #a0b4ea;   /* change this color */
-      margin-bottom: 15px;
-    }
+        .admin-box {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #7c1717, #032c62);
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
 
-    .admin-text {
-      font-size: 18px;
-      color: #7a93bb;   /* change this color */
-    }
-  </style>
+        .signout-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 8px;
+            background-color: crimson;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .signout-btn:hover {
+            background-color: darkred;
+        }
+
+        .admin-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #a0b4ea;
+            /* change this color */
+            margin-bottom: 15px;
+        }
+
+        .admin-text {
+            font-size: 18px;
+            color: #7a93bb;
+            /* change this color */
+        }
+    </style>
 </head>
+
 <body>
-  <div class="admin-box">
-    <h1 class="admin-title">Welcome Admin</h1>
-    <p class="admin-text">You have logged in successfully.</p>
-  </div>
+    <div class="admin-box">
+        <button class="signout-btn" onclick="signOut()">Sign Out</button>
+        <h1 class="admin-title">Welcome Admin :) </h1>
+        <p class="admin-text">You have logged in successfully.</p>
+        <script>
+            function signOut() {
+                localStorage.removeItem("loggedInUser");
+                window.location.href = "index.html";
+            }
+        </script>
+    </div>
 </body>
+
 </html>

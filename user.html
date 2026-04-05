@@ -1,56 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>User Page</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(to right, #905275, #587c94);
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    .user-box {
-      text-align: center;
-      padding: 40px;
-      background: linear-gradient(to right,#083a82, #942263);
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.684);
-    }
+    <title>User Page</title>
 
-    .user-title {
-      font-size: 34px;
-      font-weight: bold;
-      color: #f3f3f3d4;
-      margin-bottom: 15px;
-    }
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #905275, #587c94);
+            font-family: Arial, sans-serif;
+        }
 
-    .user-text {
-      font-size: 18px;
-      color: #fcfcfcd4;
-    }
-  </style>
+        /* Logo image styling */
+        .logo1 {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        /* Logo image styling
+        .logo {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        } */
+        .user-box {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #083a82, #942263);
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.684);
+        }
+
+        .signout-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 8px;
+            background-color: rgb(11, 22, 107);
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .signout-btn:hover {
+            background-color: darkred;
+        }
+
+        .user-title {
+            font-size: 34px;
+            font-weight: bold;
+            color: #f3f3f3d4;
+            margin-bottom: 15px;
+        }
+
+        .user-text {
+            font-size: 18px;
+            color: #fcfcfcd4;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="user-box">
-    <h1 class="user-title" id="welcomeMessage">Welcome User</h1>
-    <p class="user-text">You have logged in successfully.</p>
-  </div>
+    <div class="user-box">
+        <button class="signout-btn" onclick="signOut()">Sign Out</button>
+        <h1 class="user-title" id="welcomeMessage">Welcome User</h1>
+        <p class="user-text">You have logged in successfully.</p>
+    </div>
 
-  <script>
-    // Get saved email from localStorage
-    const savedUser = localStorage.getItem("loggedInUser");
+    <script>
+        // Get saved email from localStorage
+        const savedUser = localStorage.getItem("loggedInUser");
 
-    // If email exists, take only the part before @
-    if (savedUser) {
-      const nameOnly = savedUser.split("@")[0];
-      document.getElementById("welcomeMessage").textContent = "Welcome, " + nameOnly;
-    }
-  </script>
+        // If email exists, take only the part before @
+        if (savedUser) {
+            const nameOnly = savedUser.split("@")[0];
+            document.getElementById("welcomeMessage").textContent = "Welcome " + nameOnly + " :) ";
+        }
+
+        function signOut() {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
+
 </html>
